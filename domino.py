@@ -343,16 +343,4 @@ class Domino():
 
 if __name__ == '__main__':
     runTests()
-    '''
-    peca1 = Domino(1,2)
-    peca2 = Domino(2,3)
-    peca3 = Domino(3,4)
-    peca4 = Domino(4,5)
-    peca5 = Domino(5,6)
-    peca6 = Domino(1,3)
-    peca7 = Domino(2,6)
-    peca8 = Domino(3,4)
-    peca9 = Domino(5,5)
-    pecas = [peca1,peca2,peca3,peca4,peca5,peca6,peca7,peca8,peca9]
-    print(jogo_grande(pecas))
-    '''
+    
