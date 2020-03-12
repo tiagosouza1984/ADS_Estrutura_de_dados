@@ -402,8 +402,24 @@ dicas:
     
 '''
 def palindromo(string):
-    return True
-
+    pilha = []
+    count = 0
+    for letra in string:
+        pilha.append(letra)
+    print(pilha)
+    if len(pilha)== 0:
+        return True
+        
+    while len(pilha) >=1:
+        if pilha[len(pilha)-1] == pilha[count] and len(pilha) >1:
+            pilha.pop()
+        elif len(pilha) <=1:
+            return True
+        else:
+            return False
+        del pilha[count]
+        if len(pilha) == 0:
+            return True
 '''
 EXERCICIO
 
@@ -433,13 +449,16 @@ class Pilha():
         return self.lista.pop()
 
     def tamanho(self):
-        pass #implemente!
+        return len(self.lista)
 
     def top(self):
-        pass #implemente!
+        return self.lista[len(self.lista)-1]
 
     def vazia(self):
-        pass #implemente!
+        if len(self.lista) == 0:
+            return True
+        else:
+            return False
 
 '''
     Veja abaixo como usar os métodos já fornecidos
@@ -750,4 +769,4 @@ def explica_erro(album1,album2):
 
 if __name__ == '__main__':
     runTests()
-    #print(balanceada('([a]a<>i)'))
+    
